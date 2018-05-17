@@ -1,8 +1,8 @@
 const fahrenheit = document.querySelector('input[name="fahrenheit"]');
 const celsius = document.querySelector('input[name="celsius"]');
 
-fahrenheit.addEventListener('change', handleInput);
-celsius.addEventListener('change', handleInput);
+fahrenheit.addEventListener('keyup', handleInput);
+celsius.addEventListener('keyup', handleInput);
 
 fahrenheit.addEventListener('click', clearInput);
 celsius.addEventListener('click', clearInput);
