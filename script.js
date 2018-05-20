@@ -44,18 +44,21 @@ const app = {
     updateCSS() {
         const body = document.querySelector('body');
         let color = [180, 240];
+        if (this.fahrenheit.value != '') {
+            let diff = (parseInt(this.fahrenheit.value) - 60) * 2;
+            color[0] += diff;
+            color[1] -= diff;
+            color = color.map(item => {
+                if (item < 0)
+                    return 0;
+                else if (item > 255)
+                    return 255;
+                else
+                    return Math.floor(item);
+            });
+        }
 
-        body.style.backgroundColor = `rgb(${color[0]}, 0, ${color[2]})`;
-
-        let count = 0;
-        colors.forEach(color => {
-            if(color >= 90)
-                count++;
-        });
-
-        body.classList.remove('black');
-        body.classList.remove('white');
-        body.classList.add(count >= 2 ? 'black' : 'white');
+        body.style.backgroundColor = `rgb(${color[0]}, 0, ${color[1]})`;
     },
 }
 
