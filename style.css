@@ -31,23 +31,6 @@ h1 {
   font-size: larger;
 }
 
-form p:first-of-type {
-  display: flex;
-  align-content: center;
-  width: 100%;
-}
-
-form p:first-of-type label {
-  justify-self: flex-start;
-  margin: 0.2rem;
-  display: block;
-}
-
-form p:first-of-type input{
-  justify-self: flex-end;
-  width: 45%;
-}
-
 input {
   font-family: 'Comfortaa', cursive;
   background: transparent;
@@ -64,10 +47,6 @@ input {
   border-bottom: 1px dotted #333;
 }
 
-.black form p:first-of-type input{
-  border: 1px dotted #333;
-}
-
 .black input:focus {
   border-bottom: 1px dotted #000;
   color: #000;
@@ -81,16 +60,10 @@ input {
   border-bottom: 1px dotted #ccc;
 }
 
-.white form p:first-of-type input{
-  border: 1px dotted #ccc;
-}
-
 .white input:focus {
   border-bottom: 1px dotted #FFF;
   color: #FFF;
 }
-
-
 
 input:focus {
   outline: none;
