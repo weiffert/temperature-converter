@@ -1,4 +1,4 @@
-const app = 
+const app = {
     init(selectors) {
         this.fahrenheit = document.querySelector(selectors.fahrenheit);
         this.celsius = document.querySelector(selectors.celsius);
