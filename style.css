@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+
+html, body, main {
+  margin: 0;
+}
+
+html {
+  height: 45%;
+  font-family: 'Comfortaa', cursive;
+  font-size: larger;
+}
+
+body, main {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  align-content: flex-end;
+  justify-content: center;
+}
+
+form {
+  align-self: flex-end;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+  font-size: larger;
+}
+
+form p:first-of-type {
+  display: flex;
+  align-content: center;
+  width: 100%;
+}
+
+form p:first-of-type label {
+  justify-self: flex-start;
+  margin: 0.2rem;
+  display: block;
+}
+
+form p:first-of-type input{
+  justify-self: flex-end;
+  width: 45%;
+}
+
+input {
+  font-family: 'Comfortaa', cursive;
+  background: transparent;
+  border: none;
+  font-size: larger;
+  width: 13rem;
+}
+
+.black input, .black h1, .black label {
+  color: #333;
+}
+
+.black input {
+  border-bottom: 1px dotted #333;
+}
+
+.black form p:first-of-type input{
+  border: 1px dotted #333;
+}
+
+.black input:focus {
+  border-bottom: 1px dotted #000;
+  color: #000;
+}
+
+.white input, .white h1, .white label {
+  color: #ccc;
+}
+
+.white input {
+  border-bottom: 1px dotted #ccc;
+}
+
+.white form p:first-of-type input{
+  border: 1px dotted #ccc;
+}
+
+.white input:focus {
+  border-bottom: 1px dotted #FFF;
+  color: #FFF;
+}
+
+
+
+input:focus {
+  outline: none;
+}
