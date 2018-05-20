@@ -29,9 +29,9 @@ const app = {
     handleInput(event) {
         const input = event.target;
         if (input.name === 'fahrenheit')
-            celsius.value = this.convertToCelsius(input.value);
+            this.celsius.value = this.convertToCelsius(input.value);
         else
-            fahrenheit.value = this.convertToFahrenheit(input.value);
+            this.fahrenheit.value = this.convertToFahrenheit(input.value);
     },
 
     clearInput() {
