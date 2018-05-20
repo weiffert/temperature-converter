@@ -54,7 +54,7 @@ const app = {
 
     updateCSS() {
         const body = document.querySelector('body');
-        let color = [180, 240];
+        let color = [200, 200];
         let temperature = [];
         if (this.fahrenheit.value === '') {
             temperature.push(32);
@@ -62,9 +62,9 @@ const app = {
             temperature.push(this.fahrenheit.value);
         }
 
-        let diff = (parseInt(temperature[0]) - 60) * 2;
-        color[0] += diff;
-        color[1] -= diff;
+        let diff = (parseInt(temperature[0]) - 50);
+        color[0] += diff * 4;
+        color[1] -= diff * 4;
         color = color.map(item => {
             if (item < 0)
                 return 0;
