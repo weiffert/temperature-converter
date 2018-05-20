@@ -35,15 +35,21 @@ const app = {
 
     handleInput(event) {
         const input = event.target;
-        if (input.name === 'fahrenheit')
-            this.celsius.value = this.convertToCelsius(input.value);
-        else
-            this.fahrenheit.value = this.convertToFahrenheit(input.value);
+        if (input.value !== '') {
+            if (input.name === 'fahrenheit')
+                this.celsius.value = this.convertToCelsius(input.value);
+            else
+                this.fahrenheit.value = this.convertToFahrenheit(input.value);
+        } else {
+            this.clearInput();
+        }
+
         this.updateCSS();
     },
 
     clearInput() {
-        event.target.value = '';
+        this.fahrenheit.value = '';
+        this.celsius.value = '';
     },
 
     updateCSS() {
@@ -55,7 +61,7 @@ const app = {
         } else {
             temperature.push(this.fahrenheit.value);
         }
-        
+
         let diff = (parseInt(temperature[0]) - 60) * 2;
         color[0] += diff;
         color[1] -= diff;
