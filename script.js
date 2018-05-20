@@ -1,20 +1,20 @@
-const app = {
+const app = 
     init(selectors) {
         this.fahrenheit = document.querySelector(selectors.fahrenheit);
         this.celsius = document.querySelector(selectors.celsius);
 
         this.fahrenheit.addEventListener('keyup', event => {
-            handleInput(event)
+            this.handleInput(event)
         });
         this.celsius.addEventListener('keyup', event => {
-            handleInput(event);
+            this.handleInput(event);
         });
 
         this.fahrenheit.addEventListener('click', event => {
-            clearInput(event);
+            this.clearInput(event);
         });
         this.celsius.addEventListener('click', event => {
-            clearInput(event);
+            this.clearInput(event);
         });
     },
 
@@ -29,9 +29,9 @@ const app = {
     handleInput(event) {
         const input = event.target;
         if (input.name === 'fahrenheit')
-            celsius.value = convertToCelsius(input.value);
+            celsius.value = this.convertToCelsius(input.value);
         else
-            fahrenheit.value = convertToFahrenheit(input.value);
+            fahrenheit.value = this.convertToFahrenheit(input.value);
     },
 
     clearInput() {
