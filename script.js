@@ -16,6 +16,8 @@ const app = {
         this.celsius.addEventListener('click', event => {
             this.clearInput(event);
         });
+
+        this.updateCSS();
     },
 
     convertToFahrenheit(value) {
@@ -39,9 +41,11 @@ const app = {
         event.target.value = '';
     },
 
-    updateCSS(colors) {
+    updateCSS() {
         const body = document.querySelector('body');
-        body.style.backgroundColor = this.hex.value;
+        let color = [180, 240];
+
+        body.style.backgroundColor = `rgb(${color[0]}, 0, ${color[2]})`;
 
         let count = 0;
         colors.forEach(color => {
