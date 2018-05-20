@@ -1,11 +1,24 @@
-const fahrenheit = document.querySelector('input[name="fahrenheit"]');
-const celsius = document.querySelector('input[name="celsius"]');
+const app = {
+    init(selectors) {
+        this.fahrenheit = document.querySelector(selectors.fahrenheit);
+        this.celsius = document.querySelector(selectors.celsius);
 
-fahrenheit.addEventListener('keyup', handleInput);
-celsius.addEventListener('keyup', handleInput);
+        this.fahrenheit.addEventListener('keyup', handleInput);
+        this.celsius.addEventListener('keyup', handleInput);
 
-fahrenheit.addEventListener('click', clearInput);
-celsius.addEventListener('click', clearInput);
+        this.fahrenheit.addEventListener('click', clearInput);
+        this.celsius.addEventListener('click', clearInput);
+
+    },
+
+
+}
+
+app.init({
+    fahrenheit: 'input[name="fahrenheit"]',
+    celsius: 'input[name="celsius"]',
+});
+
 
 function convertToFahrenheit(value) {
     return value * 9 / 5 + 32;
@@ -17,7 +30,7 @@ function convertToCelsius(value) {
 
 function handleInput(event) {
     const input = event.target;
-    if(input.name === 'fahrenheit')
+    if (input.name === 'fahrenheit')
         celsius.value = convertToCelsius(input.value);
     else
         fahrenheit.value = convertToFahrenheit(input.value);
