@@ -3,12 +3,19 @@ const app = {
         this.fahrenheit = document.querySelector(selectors.fahrenheit);
         this.celsius = document.querySelector(selectors.celsius);
 
-        this.fahrenheit.addEventListener('keyup', handleInput);
-        this.celsius.addEventListener('keyup', handleInput);
+        this.fahrenheit.addEventListener('keyup', event => {
+            handleInput(event)
+        });
+        this.celsius.addEventListener('keyup', event => {
+            handleInput(event);
+        });
 
-        this.fahrenheit.addEventListener('click', clearInput);
-        this.celsius.addEventListener('click', clearInput);
-
+        this.fahrenheit.addEventListener('click', event => {
+            clearInput(event);
+        });
+        this.celsius.addEventListener('click', event => {
+            clearInput(event);
+        });
     },
 
     convertToFahrenheit(value) {
