@@ -68,3 +68,11 @@ input {
 input:focus {
   outline: none;
 }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button, {
+  background: red!important;
+  background-color: red;
+  -webkit-appearance: none;
+  margin: 0;
+}

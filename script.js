@@ -2,6 +2,7 @@ const app = {
     init(selectors) {
         this.fahrenheit = document.querySelector(selectors.fahrenheit);
         this.celsius = document.querySelector(selectors.celsius);
+        this.form = document.querySelector(selectors.form);
 
         this.fahrenheit.addEventListener('keyup', event => {
             this.handleInput(event)
@@ -15,6 +16,10 @@ const app = {
         });
         this.celsius.addEventListener('click', event => {
             this.clearInput(event);
+        });
+
+        this.form.addEventListener('submit', event => {
+            event.preventDefault();
         });
 
         this.updateCSS();
@@ -65,5 +70,6 @@ const app = {
 app.init({
     fahrenheit: 'input[name="fahrenheit"]',
     celsius: 'input[name="celsius"]',
+    form: 'form',
 });
 
