@@ -32,10 +32,26 @@ const app = {
             this.celsius.value = this.convertToCelsius(input.value);
         else
             this.fahrenheit.value = this.convertToFahrenheit(input.value);
+        this.updateCSS();
     },
 
     clearInput() {
         event.target.value = '';
+    },
+
+    updateCSS(colors) {
+        const body = document.querySelector('body');
+        body.style.backgroundColor = this.hex.value;
+
+        let count = 0;
+        colors.forEach(color => {
+            if(color >= 90)
+                count++;
+        });
+
+        body.classList.remove('black');
+        body.classList.remove('white');
+        body.classList.add(count >= 2 ? 'black' : 'white');
     },
 }
 
