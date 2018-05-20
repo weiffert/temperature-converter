@@ -31,15 +31,19 @@ h1 {
   font-size: larger;
 }
 
+p {
+  font-size: x-large;
+}
+
 input {
   font-family: 'Comfortaa', cursive;
   background: transparent;
   border: none;
   font-size: larger;
-  width: 13rem;
+  width: 4rem;
 }
 
-.black input, .black h1, .black label {
+input::placeholder, .black input, .black h1, .black label {
   color: #333;
 }
 
