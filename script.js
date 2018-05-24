@@ -41,7 +41,7 @@ const app = {
             else
                 this.fahrenheit.value = this.convertToFahrenheit(input.value);
         } else {
-            this.clearInput();
+            // this.clearInput();
         }
 
         this.updateCSS();
